@@ -1,76 +1,372 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liên hệ | TKW Mobile</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liên hệ | TKW Mobile</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/script.js"></script>
+
+<style>
+
+body{
+    background:#f5f7fb;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.hero{
+    background:linear-gradient(135deg,#0066ff,#00c6ff);
+    color:#fff;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.contact-area{
+    width:90%;
+    max-width:1200px;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.info-box,
+.form-box{
+
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+}
+
+.info-box h2,
+.form-box h2{
+
+    color:#0066ff;
+    margin-bottom:20px;
+
+}
+
+.info-item{
+
+    margin:20px 0;
+    font-size:17px;
+
+}
+
+.info-item strong{
+
+    color:#0066ff;
+
+}
+
+input,
+textarea{
+
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    box-sizing:border-box;
+
+}
+
+input:focus,
+textarea:focus{
+
+    border-color:#0066ff;
+    outline:none;
+
+}
+
+button{
+
+    width:100%;
+    padding:15px;
+    background:#0066ff;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#004ecc;
+
+}
+
+.map{
+
+    width:90%;
+    max-width:1200px;
+    margin:50px auto;
+
+}
+
+.map iframe{
+
+    width:100%;
+    height:450px;
+    border-radius:15px;
+    border:none;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+
+}
+
+.service{
+
+    width:90%;
+    max-width:1200px;
+    margin:60px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+
+}
+
+.card{
+
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card h3{
+
+    color:#0066ff;
+
+}
+
+footer{
+
+    margin-top:50px;
+
+}
+
+@media(max-width:768px){
+
+.contact-area{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
 <header>
-    <div class="container">
-        <h1>TKW Mobile</h1>
 
-        <nav>
-            <ul>
-                <li><a href="../index.html">Trang chủ</a></li>
-                <li><a href="gioi-thieu.html">Giới thiệu</a></li>
-                <li><a href="san-pham.html">Sản phẩm</a></li>
-                <li><a href="chi-tiet.html">Chi tiết</a></li>
-                <li><a href="lien-he.html" class="active">Liên hệ</a></li>
-            </ul>
-        </nav>
-    </div>
+<div class="container">
+
+<h1>TKW Mobile</h1>
+
+<nav>
+
+<ul>
+
+<li><a href="../index.html">Trang chủ</a></li>
+<li><a href="gioi-thieu.html">Giới thiệu</a></li>
+<li><a href="san-pham.html">Sản phẩm</a></li>
+<li><a href="chi-tiet.html">Chi tiết</a></li>
+<li><a class="active" href="lien-he.html">Liên hệ</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
 </header>
 
-<section class="banner">
-    <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
-    <p>TKW Mobile luôn sẵn sàng hỗ trợ bạn.</p>
+<section class="hero">
+
+<h1>Liên hệ TKW Mobile</h1>
+
+<p>Chúng tôi luôn sẵn sàng hỗ trợ và tư vấn cho bạn.</p>
+
 </section>
 
-<section class="contact container">
+<section class="contact-area">
 
-    <div class="contact-info">
-        <h2>Thông tin cửa hàng</h2>
+<div class="info-box">
 
-        <p><strong>🏢 Tên cửa hàng:</strong> TKW Mobile</p>
+<h2>Thông tin cửa hàng</h2>
 
-        <p><strong>📍 Địa chỉ:</strong> 123 Nguyễn Văn Linh, Đà Nẵng</p>
+<div class="info-item">
+<strong>🏢 Cửa hàng:</strong><br>
+TKW Mobile
+</div>
 
-        <p><strong>📞 Điện thoại:</strong> 0909 999 999</p>
+<div class="info-item">
+<strong>📍 Địa chỉ:</strong><br>
+123 Nguyễn Văn Linh, Hải Châu, Đà Nẵng
+</div>
 
-        <p><strong>📧 Email:</strong> tkwmobile@gmail.com</p>
+<div class="info-item">
+<strong>📞 Hotline:</strong><br>
+0909 999 999
+</div>
 
-        <p><strong>🕒 Giờ mở cửa:</strong> 08:00 - 21:00</p>
+<div class="info-item">
+<strong>☎ Hỗ trợ:</strong><br>
+1900 1234
+</div>
 
-    </div>
+<div class="info-item">
+<strong>📧 Email:</strong><br>
+tkwmobile@gmail.com
+</div>
 
-    <div class="contact-form">
+<div class="info-item">
+<strong>🌐 Website:</strong><br>
+www.tkwmobile.vn
+</div>
 
-        <h2>Gửi tin nhắn</h2>
+<div class="info-item">
+<strong>🕒 Giờ làm việc:</strong><br>
+08:00 - 21:00 (Thứ 2 - Chủ nhật)
+</div>
 
-        <form onsubmit="return sendMessage()">
+</div>
 
-            <input type="text" id="name" placeholder="Họ và tên" required>
+<div class="form-box">
 
-            <input type="email" id="email" placeholder="Email" required>
+<h2>Gửi liên hệ</h2>
 
-            <input type="text" id="phone" placeholder="Số điện thoại" required>
+<form onsubmit="return sendMessage()">
 
-            <textarea id="message" rows="6" placeholder="Nhập nội dung..." required></textarea>
+<input
+type="text"
+id="name"
+placeholder="Họ và tên"
+required>
 
-            <button type="submit">Gửi liên hệ</button>
+<input
+type="email"
+id="email"
+placeholder="Email"
+required>
 
-        </form>
+<input
+type="text"
+id="phone"
+placeholder="Số điện thoại"
+required>
 
-    </div>
+<textarea
+id="message"
+rows="6"
+placeholder="Nội dung cần hỗ trợ..."
+required></textarea>
+
+<button type="submit">
+Gửi liên hệ
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section class="service">
+
+<div class="card">
+
+<h3>🚚 Giao hàng nhanh</h3>
+
+<p>
+Giao hàng toàn quốc chỉ từ 1-3 ngày.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🛡️ Bảo hành chính hãng</h3>
+
+<p>
+Đầy đủ bảo hành theo quy định của hãng.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>💳 Trả góp</h3>
+
+<p>
+Hỗ trợ trả góp lãi suất ưu đãi.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>☎ Hỗ trợ 24/7</h3>
+
+<p>
+Đội ngũ tư vấn luôn sẵn sàng hỗ trợ.
+</p>
+
+</div>
+
+</section>
+
+<section class="map">
+
+<h2 style="text-align:center;color:#0066ff;margin-bottom:25px;">
+Bản đồ cửa hàng
+</h2>
+
+<iframe src="https://www.google.com/maps?q=Da%20Nang&output=embed"></iframe>
 
 </section>
 
 <footer>
-    <p>© 2026 TKW Mobile - Website bán điện thoại</p>
+
+<p>
+© 2026 TKW Mobile | Website bán điện thoại chính hãng
+</p>
+
 </footer>
 
 </body>
