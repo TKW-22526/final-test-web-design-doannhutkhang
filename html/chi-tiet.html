@@ -3,9 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi tiết sản phẩm | TKW Mobile</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/script.js"></script>
+    <title>iPhone 16 Pro Max | TKW Mobile</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #222;
+    line-height: 1.5;
+    background: #f7f7f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+header h1 {
+    color: #1e6fff;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    font-weight: 600;
+    color: #333;
+    padding: 6px 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+header nav a:hover,
+header nav a.active {
+    color: #1e6fff;
+    border-bottom-color: #1e6fff;
+}
+
+.banner {
+    background: linear-gradient(135deg, #1e6fff, #0a4fd6);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.banner h2 {
+    color: #fff;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    padding: 40px 20px;
+}
+
+.product {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    padding: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.product:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.product img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background: #eee;
+}
+
+.product h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+    min-height: 44px;
+}
+
+.product .price {
+    color: #e53935;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.btn {
+    display: inline-block;
+    background: #1e6fff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s;
+    margin-top: auto;
+}
+
+.btn:hover {
+    background: #0a4fd6;
+}
+
+.product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    background: #fff;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.product-detail-image {
+    flex: 1 1 320px;
+    max-width: 400px;
+    position: relative;
+}
+
+.detail-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #e53935;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    z-index: 2;
+    letter-spacing: 0.5px;
+}
+
+.product-detail-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    background: #eee;
+}
+
+.product-detail-info {
+    flex: 2 1 400px;
+}
+
+.product-detail-info h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: #111;
+}
+
+.product-detail-info .price {
+    font-size: 24px;
+    color: #e53935;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.product-detail-info .description {
+    color: #555;
+    margin-bottom: 22px;
+}
+
+.product-detail-info .specs {
+    margin-bottom: 24px;
+    border-top: 1px solid #eee;
+}
+
+.product-detail-info .specs li {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+.product-detail-info .specs li strong {
+    min-width: 150px;
+    color: #333;
+    font-weight: 700;
+}
+
+.product-detail-info .specs li span {
+    color: #555;
+}
+
+.section-title {
+    margin: 40px 0 20px;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 20px 20px;
+}
+
+.product-list .product img {
+    height: 150px;
+}
+
+footer {
+    background: #1a1a1a;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    header nav ul {
+        gap: 16px;
+    }
+
+    .product-detail {
+        padding: 20px;
+    }
+
+    .product-detail-info .specs li strong {
+        min-width: 120px;
+    }
+}
+    </style>
 </head>
 <body>
 
@@ -17,88 +295,46 @@
             <ul>
                 <li><a href="../index.html">Trang chủ</a></li>
                 <li><a href="gioi-thieu.html">Giới thiệu</a></li>
-                <li><a href="san-pham.html">Sản phẩm</a></li>
+                <li><a href="san-pham.html" class="active">Sản phẩm</a></li>
                 <li><a href="lien-he.html">Liên hệ</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<section class="detail container">
-
-    <div class="detail-img">
-        <img src="../assets/sp1.jpg" alt="iPhone 16 Pro Max">
-    </div>
-
-    <div class="detail-info">
-
-        <h2>iPhone 16 Pro Max</h2>
-
-        <h3 class="price">34.990.000đ</h3>
-
-        <p><strong>Tình trạng:</strong> Còn hàng</p>
-
-        <h3>Thông số kỹ thuật</h3>
-
-        <table>
-            <tr>
-                <td>Màn hình</td>
-                <td>6.9 inch Super Retina XDR OLED</td>
-            </tr>
-
-            <tr>
-                <td>Chip</td>
-                <td>Apple A18 Pro</td>
-            </tr>
-
-            <tr>
-                <td>RAM</td>
-                <td>8GB</td>
-            </tr>
-
-            <tr>
-                <td>Bộ nhớ</td>
-                <td>256GB</td>
-            </tr>
-
-            <tr>
-                <td>Camera sau</td>
-                <td>48MP + 48MP + 12MP</td>
-            </tr>
-
-            <tr>
-                <td>Camera trước</td>
-                <td>12MP</td>
-            </tr>
-
-            <tr>
-                <td>Pin</td>
-                <td>4676mAh</td>
-            </tr>
-
-            <tr>
-                <td>Hệ điều hành</td>
-                <td>iOS 26</td>
-            </tr>
-        </table>
-
-        <button onclick="addToCart()">Thêm vào giỏ hàng</button>
-
-    </div>
-
+<section class="banner">
+    <h2>IPHONE 16 PRO MAX</h2>
 </section>
 
-<section class="description container">
+<section class="product-detail container">
+    <div class="product-detail-image">
+        <span class="detail-badge">HOT</span>
+        <img src="../assets/sp1.jpg" alt="iPhone 16 Pro Max">
+    </div>
+    <div class="product-detail-info">
+        <h2>iPhone 16 Pro Max</h2>
+        <p class="price">34.990.000đ</p>
+        <p class="description">Flagship mới nhất của Apple với chip A18 Pro mạnh mẽ, khung Titan cao cấp và hệ thống camera chuyên nghiệp hỗ trợ quay video 4K Dolby Vision.</p>
+        <ul class="specs">
+            <li><strong>Màn hình:</strong> <span>6.9 inch, Super Retina XDR OLED, 120Hz</span></li>
+            <li><strong>Chip:</strong> <span>Apple A18 Pro (6 nhân)</span></li>
+            <li><strong>RAM:</strong> <span>8GB</span></li>
+            <li><strong>Bộ nhớ trong:</strong> <span>256GB / 512GB / 1TB</span></li>
+            <li><strong>Camera sau:</strong> <span>48MP + 48MP + 12MP, zoom quang 5x</span></li>
+            <li><strong>Camera trước:</strong> <span>12MP, Face ID</span></li>
+            <li><strong>Pin:</strong> <span>4685 mAh, sạc nhanh 27W, sạc không dây MagSafe 25W</span></li>
+            <li><strong>Hệ điều hành:</strong> <span>iOS 18</span></li>
+            <li><strong>Chất liệu:</strong> <span>Khung Titan, mặt lưng kính cường lực</span></li>
+            <li><strong>Kích thước - Khối lượng:</strong> <span>163 x 77.6 x 8.25 mm, 227g</span></li>
+            <li><strong>Màu sắc:</strong> <span>Titan Đen, Titan Trắng, Titan Sa Mạc, Titan Tự Nhiên</span></li>
+            <li><strong>Kháng nước:</strong> <span>IP68</span></li>
+            <li><strong>Bảo hành:</strong> <span>12 tháng chính hãng</span></li>
+        </ul>
+        <a href="lien-he.html" class="btn">Liên hệ đặt mua</a>
+    </div>
+</section>
 
-    <h2>Mô tả sản phẩm</h2>
-
-    <p>
-        iPhone 16 Pro Max sở hữu màn hình OLED 6.9 inch sắc nét,
-        chip Apple A18 Pro mạnh mẽ, camera 48MP chuyên nghiệp,
-        thời lượng pin dài và hỗ trợ sạc nhanh. Đây là lựa chọn phù hợp
-        cho học tập, làm việc và giải trí.
-    </p>
-
+    </div>
 </section>
 
 <footer>
@@ -106,3 +342,232 @@
 </footer>
 
 </body>
+</html>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>TKW Mobile</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Trang chủ</a></li>
+                <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                <li><a href="san-pham.html" class="active">Sản phẩm</a></li>
+                <li><a href="lien-he.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="banner">
+    <h2>SAMSUNG GALAXY S25 ULTRA</h2>
+</section>
+
+<section class="product-detail container">
+    <div class="product-detail-image">
+        <span class="detail-badge">HOT</span>
+        <img src="../assets/sp2.jpg" alt="Samsung Galaxy S25 Ultra">
+    </div>
+    <div class="product-detail-info">
+        <h2>Samsung Galaxy S25 Ultra</h2>
+        <p class="price">31.990.000đ</p>
+        <p class="description">Siêu phẩm Android với bút S Pen tích hợp, camera zoom 100x Space Zoom và hiệu năng đỉnh cao từ chip Snapdragon 8 Gen 4 for Galaxy.</p>
+        <ul class="specs">
+            <li><strong>Màn hình:</strong> <span>6.8 inch, Dynamic AMOLED 2X, 120Hz, độ sáng 2600 nits</span></li>
+            <li><strong>Chip:</strong> <span>Snapdragon 8 Gen 4 for Galaxy</span></li>
+            <li><strong>RAM:</strong> <span>12GB</span></li>
+            <li><strong>Bộ nhớ trong:</strong> <span>256GB / 512GB / 1TB</span></li>
+            <li><strong>Camera sau:</strong> <span>200MP + 50MP + 12MP + 10MP, zoom 100x</span></li>
+            <li><strong>Camera trước:</strong> <span>12MP</span></li>
+            <li><strong>Pin:</strong> <span>5000 mAh, sạc nhanh 45W, sạc không dây 15W</span></li>
+            <li><strong>Hệ điều hành:</strong> <span>Android 15, One UI 7</span></li>
+            <li><strong>Chất liệu:</strong> <span>Khung Titan, kính Gorilla Glass Armor 2</span></li>
+            <li><strong>Kích thước - Khối lượng:</strong> <span>162.8 x 79.0 x 8.2 mm, 218g</span></li>
+            <li><strong>Màu sắc:</strong> <span>Đen Titan, Xám Titan, Bạc Titan, Xanh Titan</span></li>
+            <li><strong>Kháng nước:</strong> <span>IP68</span></li>
+            <li><strong>Bảo hành:</strong> <span>12 tháng chính hãng, kèm bút S Pen</span></li>
+        </ul>
+        <a href="lien-he.html" class="btn">Liên hệ đặt mua</a>
+    </div>
+</section>
+
+
+<footer>
+    <p>© 2026 TKW Mobile - Website bán điện thoại</p>
+</footer>
+
+</body>
+</html>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>TKW Mobile</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Trang chủ</a></li>
+                <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                <li><a href="san-pham.html" class="active">Sản phẩm</a></li>
+                <li><a href="lien-he.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="banner">
+    <h2>XIAOMI 15</h2>
+</section>
+
+<section class="product-detail container">
+    <div class="product-detail-image">
+        <span class="detail-badge">MỚI</span>
+        <img src="../assets/sp3.jpg" alt="Xiaomi 15">
+    </div>
+    <div class="product-detail-info">
+        <h2>Xiaomi 15</h2>
+        <p class="price">18.990.000đ</p>
+        <p class="description">Thiết kế nhỏ gọn, hiệu năng mạnh mẽ cùng camera hợp tác Leica cho chất lượng ảnh chuyên nghiệp, phù hợp người dùng yêu nhiếp ảnh di động.</p>
+        <ul class="specs">
+            <li><strong>Màn hình:</strong> <span>6.36 inch, AMOLED, 120Hz, độ sáng 3200 nits</span></li>
+            <li><strong>Chip:</strong> <span>Snapdragon 8 Elite</span></li>
+            <li><strong>RAM:</strong> <span>12GB</span></li>
+            <li><strong>Bộ nhớ trong:</strong> <span>256GB / 512GB</span></li>
+            <li><strong>Camera sau:</strong> <span>50MP + 50MP + 50MP (Leica Summilux)</span></li>
+            <li><strong>Camera trước:</strong> <span>32MP</span></li>
+            <li><strong>Pin:</strong> <span>5400 mAh, sạc nhanh 90W, sạc không dây 80W</span></li>
+            <li><strong>Hệ điều hành:</strong> <span>Android 15, HyperOS 2</span></li>
+            <li><strong>Chất liệu:</strong> <span>Khung kim loại, mặt lưng kính/da</span></li>
+            <li><strong>Kích thước - Khối lượng:</strong> <span>152.3 x 71.2 x 8.08 mm, 191g</span></li>
+            <li><strong>Màu sắc:</strong> <span>Đen, Trắng, Xanh Dương</span></li>
+            <li><strong>Kháng nước:</strong> <span>IP68</span></li>
+            <li><strong>Bảo hành:</strong> <span>12 tháng chính hãng</span></li>
+        </ul>
+        <a href="lien-he.html" class="btn">Liên hệ đặt mua</a>
+    </div>
+</section>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 TKW Mobile - Website bán điện thoại</p>
+</footer>
+
+</body>
+</html>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>TKW Mobile</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Trang chủ</a></li>
+                <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                <li><a href="san-pham.html" class="active">Sản phẩm</a></li>
+                <li><a href="lien-he.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="banner">
+    <h2>OPPO RENO 14</h2>
+</section>
+
+<section class="product-detail container">
+    <div class="product-detail-image">
+        <img src="../assets/sp4.jpg" alt="OPPO Reno 14">
+    </div>
+    <div class="product-detail-info">
+        <h2>OPPO Reno 14</h2>
+        <p class="price">12.990.000đ</p>
+        <p class="description">Thiết kế thời trang, camera chân dung ấn tượng, phù hợp cho người yêu thích chụp ảnh và mạng xã hội, sạc siêu nhanh chỉ 30 phút đầy pin.</p>
+        <ul class="specs">
+            <li><strong>Màn hình:</strong> <span>6.7 inch, AMOLED cong, 120Hz</span></li>
+            <li><strong>Chip:</strong> <span>MediaTek Dimensity 8350</span></li>
+            <li><strong>RAM:</strong> <span>12GB (mở rộng ảo lên 24GB)</span></li>
+            <li><strong>Bộ nhớ trong:</strong> <span>256GB</span></li>
+            <li><strong>Camera sau:</strong> <span>50MP + 8MP + 2MP</span></li>
+            <li><strong>Camera trước:</strong> <span>50MP</span></li>
+            <li><strong>Pin:</strong> <span>5200 mAh, sạc nhanh SuperVOOC 80W</span></li>
+            <li><strong>Hệ điều hành:</strong> <span>Android 15, ColorOS 15</span></li>
+            <li><strong>Chất liệu:</strong> <span>Khung kim loại, mặt lưng kính mờ chống bám vân tay</span></li>
+            <li><strong>Kích thước - Khối lượng:</strong> <span>161.3 x 74.2 x 7.4 mm, 186g</span></li>
+            <li><strong>Màu sắc:</strong> <span>Xanh Lưu Ly, Đen Huyền Bí</span></li>
+            <li><strong>Kháng nước:</strong> <span>IP65</span></li>
+            <li><strong>Bảo hành:</strong> <span>12 tháng chính hãng</span></li>
+        </ul>
+        <a href="lien-he.html" class="btn">Liên hệ đặt mua</a>
+    </div>
+</section>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 TKW Mobile - Website bán điện thoại</p>
+</footer>
+
+</body>
+</html>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>TKW Mobile</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Trang chủ</a></li>
+                <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                <li><a href="san-pham.html" class="active">Sản phẩm</a></li>
+                <li><a href="lien-he.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="banner">
+    <h2>VIVO V50</h2>
+</section>
+
+<section class="product-detail container">
+    <div class="product-detail-image">
+        <img src="../assets/sp5.jpg" alt="Vivo V50">
+    </div>
+    <div class="product-detail-info">
+        <h2>Vivo V50</h2>
+        <p class="price">11.990.000đ</p>
+        <p class="description">Camera Zeiss chân thực, thiết kế mỏng nhẹ và thời lượng pin bền bỉ cho cả ngày dài sử dụng liên tục.</p>
+        <ul class="specs">
+            <li><strong>Màn hình:</strong> <span>6.67 inch, AMOLED, 120Hz</span></li>
+            <li><strong>Chip:</strong> <span>Snapdragon 7 Gen 3</span></li>
+            <li><strong>RAM:</strong> <span>8GB (mở rộng ảo lên 16GB)</span></li>
+            <li><strong>Bộ nhớ trong:</strong> <span>256GB</span></li>
+            <li><strong>Camera sau:</strong> <span>50MP + 8MP (ống kính Zeiss)</span></li>
+            <li><strong>Camera trước:</strong> <span>50MP, chống rung quang học</span></li>
+            <li><strong>Pin:</strong> <span>5500 mAh, sạc nhanh FlashCharge 80W</span></li>
+            <li><strong>Hệ điều hành:</strong> <span>Android 15, Funtouch OS 15</span></li>
+            <li><strong>Chất liệu:</strong> <span>Khung kim loại, mặt lưng kính/da sinh học</span></li>
+            <li><strong>Kích thước - Khối lượng:</strong> <span>158.6 x 72.6 x 7.4 mm, 186g</span></li>
+            <li><strong>Màu sắc:</strong> <span>Xanh Dương, Đen, Hồng Phấn</span></li>
+            <li><strong>Kháng nước:</strong> <span>IP68/IP69</span></li>
+            <li><strong>Bảo hành:</strong> <span>12 tháng chính hãng</span></li>
+        </ul>
+        <a href="lien-he.html" class="btn">Liên hệ đặt mua</a>
+    </div>
+</section>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 TKW Mobile - Website bán điện thoại</p>
+</footer>
+
+</body>
+</html>
